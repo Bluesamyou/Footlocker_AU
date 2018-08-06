@@ -6,6 +6,8 @@ import os
 
 import requests
 from Classes.Logger import Logger
+from names import get_first_name
+from random import randint
 from bs4 import BeautifulSoup
 
 #TODO: Fix up payment???, Get logger fixed up :(,
@@ -38,6 +40,12 @@ class Footlocker(threading.Thread):
                 self.c = load(config)
 
         log('Config file loaded'.format(thread_id))
+
+        if (self.t['account']['useCatchall']):
+            self.email = "{}{}{}".format(get_first_name,randint(0,1000),self.t['account']['catchallDomain']) 
+            print(self.email)
+        else: 
+            self.email = self.t['personalDetails']['email']
 
     def atc(self):
 
@@ -138,7 +146,7 @@ class Footlocker(threading.Thread):
                         "billing_Birthday_Day"                      : self.t['personalDetails']['bdayDay'],
                         "billing_Birthday_Month"                    : self.t['personalDetails']['bdayMonth'],
                         "billing_Birthday_Year"                     : self.t['personalDetails']['bdayYear'],
-                        "email_Email"                               : self.t['personalDetails']['email'],
+                        "email_Email"                               : self.email,
                         "billing_ShippingAddressSameAsBilling"      : "true",
                         "isshippingaddress"                         : "",
                         "shipping_Address3"                         : "",

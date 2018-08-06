@@ -3,7 +3,7 @@
     "size" : ""
   },
   "personalDetails": {
-    "firstName"         : "Shevi",
+    "firstName"         : "Shervantha",
     "lastName"          : "De Silva",
     "unitNumb"          : "1",
     "addressLine1"      : "21 Hallows Street",
@@ -24,8 +24,10 @@
     "cvc"               : "881"
   },
   "account" : {
-    "useAccount"  : false,
-    "username"    : "",
-    "password"    : ""
+    "useCatchall"     : true, 
+    "catchallDomain"  : "@bluesamyou",
+    "useAccount"      : false,
+    "username"        : "",
+    "password"        : ""
   }
 }

@@ -1,9 +1,3 @@
-# coding = utf-8
-
-# Shopify ATC v0.2.0
-# By Alex Gompper @edzart
-# http://github.com/alxgmpr
-
 from time import strftime
 
 from termcolor import colored
@@ -26,7 +20,3 @@ class Logger:
             print('[{}] {}'.format(strftime('%H:%M:%S'), text))
         else:
             print(text)
-
-    def slack(self, text):
-        # TODO: beautify this output
-        print('slack not implemented yet')

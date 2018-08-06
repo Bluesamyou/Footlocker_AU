@@ -24,8 +24,10 @@
     "cvc"               : "881"
   },
   "account" : {
-    "useAccount"  : false,
-    "username"    : "",
-    "password"    : ""
+    "useCatchall"     : true, 
+    "catchallDomain"  : "@bluesamyou",
+    "useAccount"      : false,
+    "username"        : "",
+    "password"        : ""
   }
 }
