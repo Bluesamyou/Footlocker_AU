@@ -1,5 +1,5 @@
 # FL Email Entry Bot
-Simple FL bot for Yeezys that will send an entry email when the post goes live with auto subject detection.
+Simple FL bot for checkout, Both manual and automated checkout
 
 # Steps
 * Have python installed. DUH 
