@@ -2,10 +2,13 @@ from time import strftime
 
 from termcolor import colored
 
+from colorama import init
+
 
 class Logger:
     def __init__(self, tid=None):
         self.tid = tid
+        init
 
     def set_tid(self, tid):
         self.tid = tid
