@@ -1,0 +1,31 @@
+{
+  "shoeDetails" : {
+    "size" : ""
+  },
+  "personalDetails": {
+    "firstName"         : "Shervantha",
+    "lastName"          : "De Silva",
+    "unitNumb"          : "1",
+    "addressLine1"      : "21 Hallows Street",
+    "city"              : "Glen Waverley",
+    "postcode"          : "3150",
+    "state"             : "VIC",
+    "phone"             : "0497001701",
+    "bdayDay"           : "10",
+    "bdayMonth"         : "07",
+    "bdayYear"          : "1996",
+    "email"             : "shevids@gmail.com"
+  },
+  "payment": {
+    "manual"            : true,
+    "ccNumb"            : "4862700050221096",
+    "ccExpM"            : "09",
+    "ccExpY"            : "19",
+    "cvc"               : "881"
+  },
+  "account" : {
+    "useAccount"  : false,
+    "username"    : "",
+    "password"    : ""
+  }
+}
