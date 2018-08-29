@@ -8,7 +8,7 @@ from colorama import init
 class Logger:
     def __init__(self, tid=None):
         self.tid = tid
-        init
+        init()
 
     def set_tid(self, tid):
         self.tid = tid
@@ -19,7 +19,6 @@ class Logger:
         if self.tid is not None:
             text = '[{}] :: {}'.format(self.tid, text)
         if timestamp:
-
             print('[{}] {}'.format(strftime('%H:%M:%S'), text))
         else:
             print(text)

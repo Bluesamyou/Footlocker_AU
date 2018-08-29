@@ -26,6 +26,7 @@ class Footlocker(threading.Thread):
         self.thread              = thread_id
         self.S                   = requests.session()
         self.start_time          = time()
+        self.carted              = False
 
         threading.Thread.__init__(self)
 
@@ -42,8 +43,7 @@ class Footlocker(threading.Thread):
         log('Config file loaded'.format(thread_id))
 
         if (self.t['account']['useCatchall']):
-            self.email = "{}{}{}".format(get_first_name,randint(0,1000),self.t['account']['catchallDomain']) 
-            print(self.email)
+            self.email = "{}{}{}".format(get_first_name(),randint(0,1000),self.t['account']['catchallDomain']) 
         else: 
             self.email = self.t['personalDetails']['email']
 
@@ -93,7 +93,14 @@ class Footlocker(threading.Thread):
             # Checks if sold out, unable to cart or succesfully carted
 
             if "sold out" in str(soup):
-                log("[{}] :: Size {}US is sold out".format(self.thread, size), color="red")
+                if self.carted == True:
+                    log("[{}] :: Size {}US is sold out retrying carting in 4 mins".format(self.thread, size), color="red")
+
+                    self.carted = False
+
+                    sleep(290)
+
+                log("[{}] :: Size {}US is sold out retrying carting".format(self.thread, size), color="red")
 
             elif "Product can not be added before launch date" in str(soup):
                 log("[{}] :: Product not live yet, restarting".format(self.thread), color="blue")
@@ -105,6 +112,8 @@ class Footlocker(threading.Thread):
                 shoeName    = soup.find('span', {'itemprop':'name'}).text.split('-')[0]
 
                 log('[{}] :: {}: {}US added'.format(self.thread,shoeName, size), color="green")
+
+                self.carted = True
 
                 syncToken   = soup.find('input', {'name':'SynchronizerToken'})['value']
 
@@ -193,14 +202,16 @@ class Footlocker(threading.Thread):
             else:
                 self.manualCheckout(syncToken, paymentToken)
 
-        except Exception:
+        except Exception as e:
+
+            print(e)
 
             log("[{}] :: Something went wrong while posting checkout details ".format(self.thread), color='red')
 
 
             log('[{}] :: Restarting tasks to retry ATC'.format(self.thread, self.t['personalDetails']['firstName']))
 
-            self.atc()
+            # self.atc()
 
 
     def autoCheckout(self,syncToken, paymentToken):
@@ -260,6 +271,8 @@ class Footlocker(threading.Thread):
 
         postPayment     = self.S.post(paymentUrl, data=creditCard, headers=paymentHeaders)
 
+        print(postPayment.text)
+
         finalSoup       = BeautifulSoup(postPayment.text, 'html.parser')
 
         confirmPayload  = {
@@ -288,6 +301,8 @@ class Footlocker(threading.Thread):
 
 
         finalPage       = BeautifulSoup(confirmPage.text, 'html.parser')
+
+        print (finalPage)
 
 
         postConfirm = {
@@ -332,7 +347,7 @@ class Footlocker(threading.Thread):
         text_file.close()
 
 
-        # webbrowser.open_new_tab("https://www.bpoint.com.au/payments/FOOTLOCKERAUSTRALIA?SynchronizerToken={}f&in_pay_token={}&IsFixed=1".format(syncToken, paymentToken))
+        webbrowser.open_new_tab("https://www.bpoint.com.au/payments/FOOTLOCKERAUSTRALIA?SynchronizerToken={}f&in_pay_token={}&IsFixed=1".format(syncToken, paymentToken))
 
 
         log('[{}] :: {} ready : https://www.bpoint.com.au/payments/FOOTLOCKERAUSTRALIA?SynchronizerToken={}f&in_pay_token={}&IsFixed=1'.format(self.thread,self.t['personalDetails']['firstName'],syncToken, paymentToken))
