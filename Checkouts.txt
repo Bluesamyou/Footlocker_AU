@@ -1,1 +1,1 @@
-Shervantha: https://www.bpoint.com.au/payments/FOOTLOCKERAUSTRALIA?SynchronizerToken=1f97f7a9bcde3af164c9a7b411dd6c19393cfeda2c4e0847f647ebefcdf47fa7f&in_pay_token=76697aa5-7d8d-4a3d-a0c7-92d19e4b17e2&IsFixed=1
+Shervantha: https://www.bpoint.com.au/payments/FOOTLOCKERAUSTRALIA?SynchronizerToken=dd1ce4c56d232f6fb98730956717c3e0872b9153e6e9b2f291daf3414f488459f&in_pay_token=520d91d8-0442-48e5-93c3-86b73585009a&IsFixed=1

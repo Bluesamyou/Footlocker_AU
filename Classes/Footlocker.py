@@ -1,6 +1,6 @@
 import threading
 from json import dumps, load
-from time import time
+from time import time, sleep
 import webbrowser
 import os
 
@@ -109,9 +109,11 @@ class Footlocker(threading.Thread):
 
             else:
 
-                shoeName    = soup.find('span', {'itemprop':'name'}).text.split('-')[0]
+                self.shoeName    = soup.find('span', {'itemprop':'name'}).text.split('-')[0]
 
-                log('[{}] :: {}: {}US added'.format(self.thread,shoeName, size), color="green")
+                self.image       = soup.find('img', {'class':'fl-img lazyload'})['data-src']
+
+                log('[{}] :: {}: {}US added'.format(self.thread,self.shoeName, size), color="green")
 
                 self.carted = True
 
@@ -121,7 +123,9 @@ class Footlocker(threading.Thread):
 
                 self.checkout(syncToken)
 
-        except Exception:
+        except Exception as e:
+
+            print(e)
             log("[{}] :: Something went wrong while adding to cart".format(self.thread), color='red')
 
             log('[{}] :: Restarting tasks to retry ATC'.format(self.thread, self.t['personalDetails']['firstName']))
@@ -229,7 +233,6 @@ class Footlocker(threading.Thread):
                                     "Amount"            : paymentSoup.find('input', {'id': 'Amount'})['value'],
                                     "CardType"          : "visa",
                                     "DeviceFingerprint" : ""
-
                                 })
                             }
 
@@ -271,7 +274,6 @@ class Footlocker(threading.Thread):
 
         postPayment     = self.S.post(paymentUrl, data=creditCard, headers=paymentHeaders)
 
-        print(postPayment.text)
 
         finalSoup       = BeautifulSoup(postPayment.text, 'html.parser')
 
@@ -302,7 +304,6 @@ class Footlocker(threading.Thread):
 
         finalPage       = BeautifulSoup(confirmPage.text, 'html.parser')
 
-        print (finalPage)
 
 
         postConfirm = {
@@ -320,7 +321,6 @@ class Footlocker(threading.Thread):
         visaGold = BeautifulSoup(invoicePage.text, 'html.parser')
 
 
-        print(visaGold)
         visaLoad = {
                         'PaRes'     : visaGold.find('input', {'name': 'PaRes'})['value'],
                         'MD'        : visaGold.find('input', {'name': 'MD'})['value']
@@ -331,7 +331,6 @@ class Footlocker(threading.Thread):
 
         visaPost = self.S.post(visaURL, data=visaLoad)
 
-        print(visaPost.text)
 
         if ('Thank you for your order!') in str(finalPage):
             log('[{}] :: Checkout Succesfully completed'.format(self.thread), color='green')
@@ -346,9 +345,45 @@ class Footlocker(threading.Thread):
         text_file.write("{}: https://www.bpoint.com.au/payments/FOOTLOCKERAUSTRALIA?SynchronizerToken={}f&in_pay_token={}&IsFixed=1\n".format(self.t['personalDetails']['firstName'],syncToken, paymentToken ))
         text_file.close()
 
+        print(self.image.split('?$small$')[0])
 
-        webbrowser.open_new_tab("https://www.bpoint.com.au/payments/FOOTLOCKERAUSTRALIA?SynchronizerToken={}f&in_pay_token={}&IsFixed=1".format(syncToken, paymentToken))
+        self.S.post(self.c['webhook'],
+                    data=dumps({
+                                "attachments": [
+                                                {
+                                                    "color": "#E31A38",
+                                                    "text" : "Developed by @bluesamyou",
+                                                    "author_name": "Footlocker Checkout Links",
+                                                    "author_icon": "https://botw-pd.s3.amazonaws.com/styles/logo-original-577x577/s3/0002/5414/brand.gif?itok=ZsjXcRFc",
+                                                    "thumb_url": "https:{}".format(self.image.split('?$small$')[0]),
+                                                    "fields": [
+                                                        {
+                                                            "title": "Name",
+                                                            "value": self.shoeName,
+                                                            "short": True
+                                                        },
+                                                        {
+                                                            "title": "Actions",
+                                                            "value": "<https://www.bpoint.com.au/payments/FOOTLOCKERAUSTRALIA?SynchronizerToken={}f&in_pay_token={}&IsFixed=1|Start Checkout>".format(syncToken, paymentToken),
+                                                            "short": True
 
+                                                        },
+                                                        {
+                                                            "title": "Size",
+                                                            "value": "{} US".format(self.t['shoeDetails']["size"]),
+                                                            "short": True
+
+                                                        }
+                                                    ]
+
+                                                }
+
+
+                                            ]
+
+                                        }))
+
+        # webbrowser.open_new_tab("https://www.bpoint.com.au/payments/FOOTLOCKERAUSTRALIA?SynchronizerToken={}f&in_pay_token={}&IsFixed=1".format(syncToken, paymentToken))
 
         log('[{}] :: {} ready : https://www.bpoint.com.au/payments/FOOTLOCKERAUSTRALIA?SynchronizerToken={}f&in_pay_token={}&IsFixed=1'.format(self.thread,self.t['personalDetails']['firstName'],syncToken, paymentToken))
 
