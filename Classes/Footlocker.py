@@ -1,16 +1,17 @@
 import threading
 from json import dumps, load
+from random import randint
 from time import time, sleep
-import webbrowser
-import os
 
 import requests
-from Classes.Logger import Logger
-from names import get_first_name
-from random import randint
 from bs4 import BeautifulSoup
+from names import get_first_name
 
-#TODO: Fix up payment???, Get logger fixed up :(,
+from Classes.Logger import Logger
+from Classes.ProxyManager import ProxyManager
+
+
+#TODO: Fix up payment???, add in cart random size
 
 
 
@@ -25,6 +26,7 @@ class Footlocker(threading.Thread):
 
         self.thread              = thread_id
         self.S                   = requests.session()
+        self.S.proxies           = ProxyManager().get_next_proxy(True)
         self.start_time          = time()
         self.carted              = False
 
@@ -102,6 +104,8 @@ class Footlocker(threading.Thread):
 
                 log("[{}] :: Size {}US is sold out retrying carting".format(self.thread, size), color="red")
 
+                self.atc()
+
             elif "Product can not be added before launch date" in str(soup):
                 log("[{}] :: Product not live yet, restarting".format(self.thread), color="blue")
 
@@ -125,7 +129,6 @@ class Footlocker(threading.Thread):
 
         except Exception as e:
 
-            print(e)
             log("[{}] :: Something went wrong while adding to cart".format(self.thread), color='red')
 
             log('[{}] :: Restarting tasks to retry ATC'.format(self.thread, self.t['personalDetails']['firstName']))
@@ -341,11 +344,7 @@ class Footlocker(threading.Thread):
 
     def manualCheckout(self,syncToken, paymentToken):
 
-        text_file = open("Checkouts.txt", "w")
-        text_file.write("{}: https://www.bpoint.com.au/payments/FOOTLOCKERAUSTRALIA?SynchronizerToken={}f&in_pay_token={}&IsFixed=1\n".format(self.t['personalDetails']['firstName'],syncToken, paymentToken ))
-        text_file.close()
-
-        print(self.image.split('?$small$')[0])
+        log('[{}] :: Posting webhook to Discord/Slack'.format(self.thread))
 
         self.S.post(self.c['webhook'],
                     data=dumps({
@@ -359,12 +358,14 @@ class Footlocker(threading.Thread):
                                                     "fields": [
                                                         {
                                                             "title": "Name",
-                                                            "value": self.shoeName,
+                                                            "value": self.shoeName.upper(),
                                                             "short": True
+
                                                         },
                                                         {
-                                                            "title": "Actions",
-                                                            "value": "<https://www.bpoint.com.au/payments/FOOTLOCKERAUSTRALIA?SynchronizerToken={}f&in_pay_token={}&IsFixed=1|Start Checkout>".format(syncToken, paymentToken),
+                                                            "title": "Checkout Name",
+                                                            "value": self.t['personalDetails']['firstName'] + " " +
+                                                                     self.t['personalDetails']['lastName'],
                                                             "short": True
 
                                                         },
@@ -373,7 +374,15 @@ class Footlocker(threading.Thread):
                                                             "value": "{} US".format(self.t['shoeDetails']["size"]),
                                                             "short": True
 
+                                                        },
+                                                        {
+                                                            "title": "Actions",
+                                                            "value": "<https://www.bpoint.com.au/payments/FOOTLOCKERAUSTRALIA?SynchronizerToken={}f&in_pay_token={}&IsFixed=1|COMPLETE PAYMENT>".format(
+                                                                syncToken, paymentToken),
+                                                            "short": True
+
                                                         }
+
                                                     ]
 
                                                 }
@@ -385,9 +394,10 @@ class Footlocker(threading.Thread):
 
         # webbrowser.open_new_tab("https://www.bpoint.com.au/payments/FOOTLOCKERAUSTRALIA?SynchronizerToken={}f&in_pay_token={}&IsFixed=1".format(syncToken, paymentToken))
 
-        log('[{}] :: {} ready : https://www.bpoint.com.au/payments/FOOTLOCKERAUSTRALIA?SynchronizerToken={}f&in_pay_token={}&IsFixed=1'.format(self.thread,self.t['personalDetails']['firstName'],syncToken, paymentToken))
 
         log('[{}] :: Restarting tasks to retry ATC'.format(self.thread,self.t['personalDetails']['firstName']))
+
+        self.S.cookies.clear()
 
         self.atc()
 
