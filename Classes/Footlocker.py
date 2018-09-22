@@ -106,10 +106,11 @@ class Footlocker(threading.Thread):
 
                 self.atc()
 
-            elif "Product can not be added before launch date" in str(soup):
+            elif "Product can not be added before launch date" in str(soup) or "Internal error, please try again." in str(soup):
                 log("[{}] :: Product not live yet, restarting".format(self.thread), color="blue")
 
                 self.atc()
+
 
             else:
 
@@ -129,7 +130,7 @@ class Footlocker(threading.Thread):
 
         except Exception as e:
 
-            log("[{}] :: Something went wrong while adding to cart".format(self.thread), color='red')
+            log("[{}] :: Something went wrong while adding to cart: {}".format(self.thread, e), color='red')
 
             log('[{}] :: Restarting tasks to retry ATC'.format(self.thread, self.t['personalDetails']['firstName']))
 
@@ -346,7 +347,7 @@ class Footlocker(threading.Thread):
 
         log('[{}] :: Posting webhook to Discord/Slack'.format(self.thread))
 
-        self.S.post(self.c['webhook'],
+        self.S.post(self.t['personalDetails']['webhook'],
                     data=dumps({
                                 "attachments": [
                                                 {

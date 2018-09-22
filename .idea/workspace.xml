@@ -3,9 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="50852042-b6f5-4a97-b88c-a8dabc475688" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Checkouts.txt" afterPath="$PROJECT_DIR$/Checkouts.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Classes/Footlocker.py" afterPath="$PROJECT_DIR$/Classes/Footlocker.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Classes/ProxyManager.py" afterPath="$PROJECT_DIR$/Classes/ProxyManager.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config.json" afterPath="$PROJECT_DIR$/config.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/proxies.txt" afterPath="$PROJECT_DIR$/proxies.txt" />
     </list>
@@ -32,11 +30,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Footlocker.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Footlocker.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Classes/Footlocker.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3074">
-              <caret line="106" column="26" lean-forward="false" selection-start-line="106" selection-start-column="26" selection-end-line="106" selection-end-column="26" />
+            <state relative-caret-position="1682">
+              <caret line="88" column="0" lean-forward="true" selection-start-line="88" selection-start-column="0" selection-end-line="88" selection-end-column="0" />
               <folding>
                 <element signature="e#0#16#0" expanded="true" />
               </folding>
@@ -58,48 +56,24 @@
         <entry file="file://$PROJECT_DIR$/proxies.txt">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
-              <caret line="0" column="19" lean-forward="false" selection-start-line="0" selection-start-column="19" selection-end-line="0" selection-end-column="19" />
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Task - Copy - Copy - Copy - Copy.json" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tasks/Task - Copy - Copy - Copy - Copy.json">
+      <file leaf-file-name="Tasks.json" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tasks/Tasks.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="290">
-              <caret line="10" column="33" lean-forward="false" selection-start-line="10" selection-start-column="33" selection-end-line="10" selection-end-column="33" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Task - Copy - Copy - Copy - Copy - Copy - Copy - Copy.json" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/tasks/Task - Copy - Copy - Copy - Copy - Copy - Copy - Copy.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="522">
-              <caret line="18" column="14" lean-forward="false" selection-start-line="18" selection-start-column="14" selection-end-line="18" selection-end-column="14" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Task - Copy - Copy - Copy - Copy - Copy - Copy.json" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tasks/Task - Copy - Copy - Copy - Copy - Copy - Copy.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="58">
-              <caret line="2" column="15" lean-forward="false" selection-start-line="2" selection-start-column="15" selection-end-line="2" selection-end-column="15" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Task - Copy - Copy - Copy - Copy - Copy.json" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tasks/Task - Copy - Copy - Copy - Copy - Copy.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="58">
-              <caret line="2" column="18" lean-forward="false" selection-start-line="2" selection-start-column="18" selection-end-line="2" selection-end-column="18" />
-              <folding />
+            <state relative-caret-position="261">
+              <caret line="12" column="39" lean-forward="false" selection-start-line="12" selection-start-column="39" selection-end-line="12" selection-end-column="39" />
+              <folding>
+                <marker date="1537593048638" expanded="true" signature="0:1016" ph="{...}" />
+                <marker date="1537593048638" expanded="true" signature="20:43" ph="{&quot;size&quot;: &quot;8&quot;...}" />
+                <marker date="1537593048638" expanded="true" signature="66:663" ph="{&quot;firstName&quot;: &quot;Shervantha&quot;...}" />
+                <marker date="1537593048638" expanded="true" signature="678:834" ph="{&quot;manual&quot;: true...}" />
+                <marker date="1537593048638" expanded="true" signature="850:1014" ph="{&quot;useCatchall&quot;: true...}" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -109,6 +83,16 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="29">
               <caret line="1" column="24" lean-forward="false" selection-start-line="1" selection-start-column="24" selection-end-line="1" selection-end-column="24" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ebay.py" pinned="false" current-in-tab="false">
+        <entry file="file://$USER_HOME$/Downloads/ebay.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -135,10 +119,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>amount</find>
-      <find>card</find>
-      <find>biller</find>
-      <find>device</find>
       <find>fingerprint</find>
       <find>migs</find>
       <find>PaRe</find>
@@ -147,7 +127,6 @@
       <find>cc</find>
       <find>data-email</find>
       <find>payme</find>
-      <find>error</find>
       <find>Than</find>
       <find>starting</find>
       <find>log</find>
@@ -158,13 +137,18 @@
       <find>payment</find>
       <find>manu</find>
       <find>sku</find>
-      <find>image</find>
       <find>US</find>
-      <find>img</find>
-      <find>print</find>
       <find>PRINT</find>
       <find>read</find>
       <find>retrying cart</find>
+      <find>AA</find>
+      <find>55</find>
+      <find>image</find>
+      <find>Product</find>
+      <find>Product can not be added before launch date</find>
+      <find>img</find>
+      <find>error</find>
+      <find>print</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -189,10 +173,13 @@
         <option value="$PROJECT_DIR$/tasks/Task - Copy - Copy - Copy - Copy - Copy.json" />
         <option value="$PROJECT_DIR$/tasks/Task - Copy - Copy - Copy - Copy.json" />
         <option value="$PROJECT_DIR$/Classes/ProxyManager.py" />
+        <option value="$PROJECT_DIR$/tasks/Task - Copy - Copy - Copy - Copy - Copy - Copy - Copy.json" />
+        <option value="$PROJECT_DIR$/tasks/Tasks - Copy.json" />
+        <option value="$PROJECT_DIR$/tasks/Tasks.json" />
+        <option value="$USER_HOME$/Downloads/ebay.py" />
         <option value="$PROJECT_DIR$/proxies.txt" />
         <option value="$PROJECT_DIR$/Classes/Footlocker.py" />
         <option value="$PROJECT_DIR$/config.json" />
-        <option value="$PROJECT_DIR$/tasks/Task - Copy - Copy - Copy - Copy - Copy - Copy - Copy.json" />
       </list>
     </option>
   </component>
@@ -221,7 +208,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/Code Tings" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../FootLocker V0.3 - Futures" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -417,17 +404,24 @@
       <option name="project" value="LOCAL" />
       <updated>1536791466481</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Added proxy support">
+      <created>1537137142072</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1537137142072</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-13" y="-13" width="2762" height="1770" extended-state="0" />
+    <frame x="-13" y="-13" width="2762" height="1770" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5799373" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.52081954" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28023794" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -450,7 +444,7 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.52081954" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.5148711" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
@@ -469,46 +463,16 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Added in webhooks for checkouts" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added in webhooks for checkouts" />
+    <MESSAGE value="Added proxy support" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added proxy support" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/Classes/Footlocker.py</url>
-          <line>3</line>
-          <option name="timeStamp" value="5" />
-        </line-breakpoint>
-      </breakpoints>
       <option name="time" value="6" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Classes/Footlocker.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="464">
-          <caret line="21" column="0" lean-forward="true" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#16#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Classes/ProxyManager.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="261">
-          <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/proxies.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../Naked Bot/classes/Logger.py" />
     <entry file="file://$PROJECT_DIR$/tasks/Task.json" />
     <entry file="file://$PROJECT_DIR$/../Python Shit/Bot_Pub.py" />
@@ -629,34 +593,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="58">
-          <caret line="2" column="33" lean-forward="false" selection-start-line="2" selection-start-column="33" selection-end-line="2" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Classes/ProxyManager.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2088">
           <caret line="75" column="0" lean-forward="false" selection-start-line="75" selection-start-column="0" selection-end-line="75" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/proxies.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="19" lean-forward="false" selection-start-line="0" selection-start-column="19" selection-end-line="0" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Checkouts.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="29">
-          <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -669,13 +609,65 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Classes/Footlocker.py">
+    <entry file="file://$PROJECT_DIR$/tasks/Task - Copy - Copy - Copy - Copy - Copy - Copy - Copy.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3074">
-          <caret line="106" column="26" lean-forward="false" selection-start-line="106" selection-start-column="26" selection-end-line="106" selection-end-column="26" />
+        <state relative-caret-position="493">
+          <caret line="20" column="31" lean-forward="true" selection-start-line="20" selection-start-column="31" selection-end-line="20" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tasks/Tasks - Copy.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="58">
+          <caret line="2" column="15" lean-forward="false" selection-start-line="2" selection-start-column="15" selection-end-line="2" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Downloads/ebay.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Checkouts.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="29">
+          <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tasks/Tasks.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="261">
+          <caret line="12" column="39" lean-forward="false" selection-start-line="12" selection-start-column="39" selection-end-line="12" selection-end-column="39" />
           <folding>
-            <element signature="e#0#16#0" expanded="true" />
+            <marker date="1537593048638" expanded="true" signature="0:1016" ph="{...}" />
+            <marker date="1537593048638" expanded="true" signature="20:43" ph="{&quot;size&quot;: &quot;8&quot;...}" />
+            <marker date="1537593048638" expanded="true" signature="66:663" ph="{&quot;firstName&quot;: &quot;Shervantha&quot;...}" />
+            <marker date="1537593048638" expanded="true" signature="678:834" ph="{&quot;manual&quot;: true...}" />
+            <marker date="1537593048638" expanded="true" signature="850:1014" ph="{&quot;useCatchall&quot;: true...}" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/proxies.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="58">
+          <caret line="2" column="33" lean-forward="false" selection-start-line="2" selection-start-column="33" selection-end-line="2" selection-end-column="33" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -687,11 +679,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tasks/Task - Copy - Copy - Copy - Copy - Copy - Copy - Copy.json">
+    <entry file="file://$PROJECT_DIR$/Classes/Footlocker.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="522">
-          <caret line="18" column="14" lean-forward="false" selection-start-line="18" selection-start-column="14" selection-end-line="18" selection-end-column="14" />
-          <folding />
+        <state relative-caret-position="1682">
+          <caret line="88" column="0" lean-forward="true" selection-start-line="88" selection-start-column="0" selection-end-line="88" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#16#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
